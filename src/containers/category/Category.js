@@ -27,7 +27,6 @@ class Category extends Component {
   initialize = async () => {
     this.setState({initialize: true})
     const categoryName = await pathParser(this.props.location.pathname);
-    console.log('category', categoryName);
     if (!categoryName.first) return;
     this.setState({category: categoryName.first});
     const categoryID = await categoryId(this.props.categories.body, categoryName.first);
@@ -37,6 +36,9 @@ class Category extends Component {
   filterList = (event) => {
     // make spinner loader appear
     event.currentTarget.classList.add('is-loading');
+    const deleteButton = Array.prototype.slice.call(document.querySelectorAll('.delete'), 0);
+    console.log(deleteButton);
+    // .classList.remove('is-hidden');
     let updatedList = this.props.skills.body;
 
     updatedList = updatedList.filter((item) => {
@@ -76,8 +78,8 @@ class Category extends Component {
                 <span className="icon is-small is-left">
                   <i className="fas fa-envelope"></i>
                 </span>
-                <span className="icon is-small is-right" onClick={(e) => this.clearSearch(e)}>
-                  <i className="fas fa-check">x</i>
+                <span className="icon is-small is-right">
+                  <a onClick={(e) => this.clearSearch(e)} className="delete is-small is-hidden"></a>
                 </span>
               </div>
           </div>

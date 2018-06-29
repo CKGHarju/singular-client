@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
+import UnSplash from '../../services/splashImages.js';
 import { Hero, BulmaBoiler, TagCloud, ActivityList } from '../../components/'
 import './Home.css';
 
@@ -8,6 +9,7 @@ class Home extends Component {
   render () {
     return (
       <div>
+        <UnSplash category="NAture" ></UnSplash>
         <Hero
           color="dark"
           title="Learn something exiting today in "

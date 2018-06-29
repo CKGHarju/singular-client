@@ -5,7 +5,7 @@
 //
 // $black:        hsl(0, 0%, 4%) !default
 // $black-bis:    hsl(0, 0%, 7%) !default
-// $black-ter:    hsl(0, 0%, 14%) !default
+   $black-ter:    $palette-black !default;
 //
 // $grey-darker:  hsl(0, 0%, 21%) !default
 // $grey-dark:    hsl(0, 0%, 29%) !default
@@ -25,10 +25,17 @@
 // $blue:         hsl(217, 71%,  53%) !default
 // $purple:       hsl(271, 100%, 71%) !default
 // $red:          hsl(348, 100%, 61%) !default
-//
+
+   $palette-black:      hsl(0, 0%, 22%) !default;
+   $palette-green:      hsl(151, 88%, 78%) !default;
+   $palette-orange:     hsl(17, 89%, 96%) !default;
+   $palette-lila:       hsl(245, 33%, 73%) !default;
+   $palette-grey:       hsl(212, 14%, 41%) !default;
+   $palette-yellow:     hsl(53, 78%, 95%) !default;
+
 // // Typography
 //
-// $family-sans-serif: BlinkMacSystemFont, -apple-system, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default
+$family-sans-serif: "Encode Sans", "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", "Helvetica", "Arial", sans-serif !default
 // $family-monospace: monospace !default
 // $render-mode: optimizeLegibility !default
 //
@@ -74,6 +81,21 @@
 //
 // $variable-columns: true !default
 
+// Base Stuff
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Scope One" !important;
+  letter-spacing: -.008em;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Encode Sans" !important;
+
+}
+
 
 // Navbar navmenu on touch is-active
 .navbar-menu {
@@ -83,6 +105,15 @@
     width: 100vh;
   }
 }
+
+// Views
+
+.activity-list {
+  & article.media {
+    margin-bottom: .25rem;
+  }
+}
+
 
 // Helpers!!!
 .is-paddingless{

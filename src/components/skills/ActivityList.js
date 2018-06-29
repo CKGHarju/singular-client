@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 export default class ActivityList extends AsyncList {
   render() {
-    return <section className="section has-half-padding-top">
+    return <section className="section activity-list has-half-padding-top">
       <div className="container">
         {this.props.children}
         {this.renderAsyncList(
