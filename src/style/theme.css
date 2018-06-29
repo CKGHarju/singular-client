@@ -1,7 +1,21 @@
+body,
+button,
+input,
+select,
+textarea {
+  font-family: "Scope One" !important;
+  letter-spacing: -.008em; }
+
+h1, h2, h3, h4, h5 {
+  font-family: "Encode Sans" !important; }
+
 .navbar-menu.is-active {
   display: block;
   position: absolute;
   width: 100vh; }
+
+.activity-list article.media {
+  margin-bottom: .25rem; }
 
 .is-paddingless-bottom {
   padding-bottom: 0 !important; }
