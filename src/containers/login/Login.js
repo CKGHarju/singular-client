@@ -4,6 +4,7 @@ import { Redirect } from 'react-router';
 import './Login.css';
 import FacebookLogin from 'react-facebook-login';
 import { fetchProfileActionCreator, saveUserTokenActionCreator } from '../../store/actions/actions';
+import config from '../../config/config'
 
 class Login extends Component {
 
@@ -18,7 +19,7 @@ class Login extends Component {
     } else {
       return (
       <FacebookLogin
-        appId="269659623604674"
+        appId={config.facebook_ID}
         autoLoad={true}
         fields="name,email,picture"
         callback={this.responseFacebook}

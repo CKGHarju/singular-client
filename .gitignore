@@ -74,4 +74,4 @@ typings/
 .env.production.local
 
 # configuration
-config.js
+config/config.js
