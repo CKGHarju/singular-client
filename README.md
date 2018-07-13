@@ -10,22 +10,22 @@ Singular is open and free to use, it enables a user to curate his profile and of
 
 # Getting started
 
-Clone the repo, then in project directory, run the following scripts:
+## Singular app expects a REST api, follow these steps to install it!
+
+1. Clone the [Singular-server repo](https://github.com/cristinaguimaraes/singular-server), follow the steps to install and run mysql and get some sample data installed. Then run server on port 3010.
+
+## Time to setup the client
+
+Clone the repo, and create `src\config\config.js`, following the example in `src\config\config.example.js`.
+You will need a facebook app ID, go to [Facebook for developers](https://developers.facebook.com/) to create it.
+
+In project directory, run the following scripts:
 
 - `npm install`
 - `npm start`
 - `npm watch-css`
 
 Runs the app in the development mode. [http://localhost:3000](http://localhost:3000) in local machine.
-
-## Singular app expects a REST api, follow these steps to install it!
-
-1. Clone the [Singular-server repo](https://github.com/cristinaguimaraes/singular-server), follow the steps to install and run mysql and get some sample data installed. Then run server on port 3010.
-
-2. In client repo, configure `server_url` in `config/config.js`, to match local machine ip.
-
-3. Run `npm start`
-
 
 # Tech stack
 
